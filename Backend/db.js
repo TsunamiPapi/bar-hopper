@@ -22,7 +22,7 @@ async function connectToDatabase() {
     console.error('Failed to connect to the database:', error);
     throw error; // Propagate the error to the calling function
   }
-}
+} 
 
 module.exports = {
   connectToDatabase,

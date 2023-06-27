@@ -5,7 +5,7 @@ const { saveBarsToDatabase } = require('../controllers/controller');
 
 
 // Route to handle the request and make the API calls
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const { zipcode } = req.body;
   console.log('Received zipcode:', zipcode);
 
@@ -43,8 +43,7 @@ router.post('/', (req, res) => {
         });
 
       // Log the list of bars
-     // console.log('Bars:', bars);
-
+      // console.log('Bars:', bars);
       // Send the list of bars as a response to the frontend
       res.status(200).json(bars);
     })
